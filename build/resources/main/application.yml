@@ -1,0 +1,72 @@
+Spring:
+  profiles:
+    active: native
+server:
+  port: 8080
+---
+spring:
+  profiles: native
+  jackson:
+    serialization.indent-output: true
+  cloud:
+    config:
+      allowOverride: true
+      failFast: true
+      server:
+        native:
+          serarhLocations: file://I:/SpringExample/config/licensingservice
+#
+#
+#
+#
+#      server:
+#        git:
+#          uri: git@github.com:ArquesTrading/argos-config.git
+#          searchPaths: common,data-service,order-service,strategy-service
+#          ignoreLocalSshSettings: true
+#          strictHostKeyChecking: false
+#          privateKey: |
+#            -----BEGIN RSA PRIVATE KEY-----
+#            MIIG5AIBAAKCAYEA0CjcsrsGzEtwsaCv+jmmoCjHYJO6mblJsA/prPXTHlp8jS1c
+#            hmMogtDXIbsjep8G1tOKF57AnZ8lo+ZAuazq9gz/NzSbGCuoGuVC1FaV+LdfInJ3
+#            mYwVrQH5R30Rt6Bcd/LM7Ab3Y/RsPxfm8FRyZ/R33LDqvyH0ahZTFp8OwXI8CHTw
+#            gA/8bXRNcmsfOD+i5JKAbY+9TUUI3m+1c/+fOOwgoH3gO4YoZqHzyENiP7EzWw5n
+#            wJshwBpmMOoHDGtyB5KzVLMcFbrxElfinbpwPcW8bxYosEL+i2iI0yGJSQSna8LH
+#            7VyOLWWBK3bW+tYH3/4A/Ga3xqfCwT/ZkAGHQ/S5jB2nyF0YGgYfVjLpolEO6XIS
+#            6tL2Auis7o3/WGITWnEuQvGF416PH20/eHzuVbVcfQUtTc3XGyF/lDzLuo010jOt
+#            yJlhnrGedFwbqpK9HwFjdn+etdYFuBUhvOYKFNUFowatXjvXKpbpoPuEZrVsTKBI
+#            /M2GL5wM0huv8GN3AgMBAAECggGAJddn164cXENSp1f45dpZKkB/jlUM1SlT9gfO
+#            iTzfNmNoxRl7+opIMQ/aLC2jE4WZbrBiKE0Z4w2tgBA5sAd5Z2WRd+2+TDSTiOAo
+#            uAVNmjtrtg1tJKLMxfjX4mEgOWuTo9Kl4jqZ+rfSfd3Qg9w2OCO/LoWTB1Aa6LZK
+#            QJCF1DD6LOdlWUKOty8vbR+AO2+GI1tmsYQx+7wTEqzoJcBQp751Z/e6LdgDvDSw
+#            5rUpRT7ngSQrRF5vUkb6UOYahe16J0xYpRzaUBkAxUwHMwPjHHZLd2v5zmTwqIhv
+#            FKg4lxrGtoPlarPI0TCreABfJGvsZ5WkrxesOSKyx4cOfQOxGmIQRAB6TKrusdf7
+#            ItHSixZ7dmMPxBDHNC8k98zfCZUUKlDgaLrGq89U/LTHnUAVShkwpBd+mCL4rLwW
+#            2Msp/32a77PvvAoPlWS8KT/rXaAwEjKrob8cZnhetTuvkcyPMEdPK9WpMHLlGTiF
+#            tNUHduDwCn0+W+Enc0epBUQcgLABAoHBAPOsRMXds2WYHSrNvfvE8Wul55kX7zog
+#            TypFJu93WItjQkIQ3727Q3+95JyUFq0Un5cClYwTEgWe+pSNJXofEm5JlhX3EhqF
+#            EPUV23IebRPrWvTyX8GpXcv+CJShI62iI9SVq76/uUJOFG5CFiBvT+LS9SWlfUED
+#            u4XCMYtmlnASakA3w37sstUokTT56kA7RVhfJ81m1J1llnGPBumPPyiejxOpoXFX
+#            C5AwZRWJX6GGU272zeHzFgIdRgLOOmC0AQKBwQDasKv69/kP+/XDFHfEJLjJPclI
+#            JU4U0yjLThuEMKybsa+9Nr463RRsYyOG8Fl9xzvyIRpJbVFrn7Xy0JIMTCDnTleh
+#            oAZKgMKVQn9kxL1Bql1XrE3jZyZln15eROUnlq917zg4v6DpTgB4qXUFjGHvwigk
+#            GiPU44gDzPwxGpBXFGufapZF2qx6dIT5rUyrzTmVU2vTfzHjZFVey8rcXGawFJxl
+#            Zv6k0sx1y1D9LxjIRP6T49J9v5frgVk/WyxQt3cCgcEAzCZJHClJUtWloiXrhNMU
+#            nObLaXUnBWDqUnTLUReBRI6thWJTwcbxn0V+Ejzz3qCHsGIG3utfTvxJ3kl+25jK
+#            vUHDj7WHIlbXxS5Bw5OAOY8Wjl++ICeAoRa9I6D5nlBYipO250IDuWxnK5UMqrH3
+#            kQbDQn4quVyiMEdpcOxLH6wd/p15mY4/qdyqA2NagePmjkpys2DywsfIym1VEjrk
+#            ZGirYILe8nFGC9Cv7+I/D7nVjwMRrLsXdkAGVvVm7XwBAoHBAL6sbbbLQIA8SgKG
+#            NQpyjh8AXSAnTpX/qkDg4EL4gXbajQSn12LRYb5DDjXYF97/uHebfyToSKZSwTxt
+#            t/k64zFp8CP+t517+KxVJ2f/1ZeMaAhKNjsAs8zFEG2XGknTKzbjlZx9EFp65RRP
+#            g7WLudRm78LSe81heTT/JB/YLmOObWu4bj+Hsvyt3UcoX4In1H4rFwd3jlLaJ0kY
+#            3M4XTn1V6yrKi1nAZf6KgBnQV4Y+Cc1+RQfY5iezRtJjtxbFbwKBwHRgr4LsgLwe
+#            aRMvFHcUVrxvB0uvaxkdTu/DNkeGu3kD4aiqaJrFV9/ybS3OyRVNJuc1S9ogx8ys
+#            U1P2kTv7AbS+x2dRP26khb7vbzuOISbt8GdXIYliBs2wcVKD7MjM074tudeb5ZRm
+#            Pnj+kbtG8gt60D941R34lC2hW523/MxoUg9Uz8lG3Wj6n2M8l0rBYs+G32jQbP9D
+#            YxeFrOFFv3/d1jqQmp5wl/1zT8cmxtM5S+jC5kpWVUfyUNorRlA6Yw==
+#            -----END RSA PRIVATE KEY-----
+
+#          username: rires@arques.com
+#          password:
+#          hostKey: AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==
+#          hostKeyAlgorithm: ssh-rsa
